@@ -1,0 +1,113 @@
+// CHECK FOR EXCESS TERMS
+
+	// Go through the input string searching for space delimeter
+	//int delimeterPositions[3] = {0, 0, 0}; /* Array that defines the positions of spaces and the NULL character (1 true, 0 false)*/
+	//int delimeterIndex = 0;
+	int counter = 0; /* To check the correct number of terms */
+	
+	//printf("%d\n", userInput[inputLength]);
+	
+	for( int i = 0; i < inputLength; i++ )
+	{
+		if( userInput[i] == ' ' )
+		{
+			//delimeterPositions[delimeterIndex++] = i;
+			counter++;
+		}
+	}
+	
+	
+	// ERROR CASE
+	if( counter != 3 )
+	{
+		printf("Incorrect number of input terms");
+		goto INPUT;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+	//printf("%d\n", userInput[inputLength]);
+	
+	for( int i = 0; i < inputLength; i++ )
+	{
+		if( userInput[i] == ' ' )
+		{
+			delimeterPositions[delimeterIndex++] = i;
+			counter++;
+		}
+	}
+	
+	
+	
+
+	// Print positions of delimeters
+	for( int i = 0; i < sizeof(delimeterPositions)/sizeof(delimeterPositions[0]); i++)
+	{
+		printf("%d ", delimeterPositions[i]);	
+	}
+	printf("\n");
+	// Isolate the types we want to return
+	char types[delimeterPositions[0]];
+	for( int i = 0; i < delimeterPositions[0]; i++ )
+	{
+		types[i] = userInput[i];
+	}
+	printf("\n%stest\n", types);
+	
+	
+	// Identify the bounds and intermediate rows
+	int lengthStartString = delimeterPositions[1] - delimeterPositions[0] - 1;
+	char startString[MAX_STRING_LENGTH];
+	for( int i = 0; i < lengthStartString; i++ )
+	{
+		startString[i] = userInput[delimeterPositions[0] + 1 + i];
+	}
+	printf("\n%stest\n", startString);
+	printf("%ld", strlen(startString));
+	/*
+	//ENDSTRING
+	int lengthEndString = delimeterPositions[2] - delimeterPositions[1] - 1;
+	//printf("\n length end string: %d\n", lengthEndString);
+	char endString[MAX_STRING_LENGTH];
+	for(int i = 0; i < lengthEndString; i++ )
+	{
+		endString[i] = userInput[delimeterPositions[1] + 1 + i];
+	}
+	printf("\n%stest\n", endString);
+	
+	/*
+	//INTERMEDIATE
+	int lengthIntermediateRows = delimeterPositions[3] - delimeterPositions[2] - 1;
+	char intermediateRows[100];
+	for(int i = 0; i < lengthEndString; i++ )
+	{
+		intermediateRows[i] = userInput[delimeterPositions[2] + 1 + i];
+	}
+	*/
+	
+	//printf("%ld\n", strlen(types));
+	//printf("%s\n", types);
+	//printf("%ld", strlen(startString));
+	//printf("\n%stest", startString);
+
+	//printf("\n%stest\n", endString);
+	//printf("%ld", strlen(endString));
+	
+	
+	//printf("error");
+	/*double angle = PI/2;
+	double result = sine(angle);
+	printf("%lf", result);*/

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1504605486 source:/home/calum/OneDrive/UNIVERSITY/MTRX1702/Assignment1/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

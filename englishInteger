@@ -1,0 +1,30 @@
+#include <stdio.h> 
+#include <string.h>
+#include <stdlib.h>
+#define BUF_SIZE 2048
+
+int main(int command, char *input[]) {
+	
+	printf("input: %s\n", input[1]);
+	
+	char string[BUF_SIZE];
+	strcpy(string, input[1]);
+	int length = strlen(string);
+	
+	int number = atoi(string);	
+	char *units[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
+	char *tens[] = {"invalidZeros", "invalidTens", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety", "hundred"};
+
+	printf("%s\n", units[number]);
+	char tenChar = string[length - 1];
+	int ten = tenChar - '0';
+	if (ten < 2){
+		//printf("test\n");
+		printf("%s \n", units[number]);
+		
+	}
+	
+	printf("%s\n", string);
+	printf("length: %d\n", length);
+	return 0;
+}
